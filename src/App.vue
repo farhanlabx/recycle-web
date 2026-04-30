@@ -1,7 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import gsap from "gsap"
 </script>
 
 <template>
-  <HelloWorld />
+  
 </template>
