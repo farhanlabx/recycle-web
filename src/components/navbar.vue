@@ -3,14 +3,13 @@
     class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 transition-all duration-500"
     :class="scrolled ? 'bg-black/60 backdrop-blur-md border-b border-white/10' : 'bg-transparent'"
   >
-    <!-- LEFT: Logo -->
+  
     <div class="flex items-center gap-2 flex-1">
       <span class="text-white font-black text-lg tracking-tight">
         ♻ <span class="font-light">recycle</span><span class="text-green-400">web</span>
       </span>
     </div>
 
-    <!-- CENTER: Nav links -->
     <div class="hidden md:flex items-center gap-8">
       <a
         v-for="link in navLinks"
@@ -23,9 +22,7 @@
       </a>
     </div>
 
-    <!-- RIGHT: Language + Auth -->
     <div class="flex items-center gap-3 flex-1 justify-end relative">
-      <!-- Language selector -->
       <div class="relative" data-lang>
         <button
           class="flex items-center gap-1.5 text-white/60 hover:text-white text-sm transition-colors duration-200 px-2 py-1 rounded-md hover:bg-white/10"
@@ -45,7 +42,6 @@
           </svg>
         </button>
 
-        <!-- Language dropdown -->
         <transition name="dropdown">
           <div
             v-if="langOpen"
@@ -65,10 +61,8 @@
         </transition>
       </div>
 
-      <!-- Divider -->
       <div class="w-px h-4 bg-white/20" />
 
-      <!-- Sign In -->
       <a
         href="#"
         class="text-white/70 hover:text-white text-sm font-medium transition-colors duration-200 px-3 py-1.5 rounded-lg hover:bg-white/10"
@@ -76,7 +70,6 @@
         Sign In
       </a>
 
-      <!-- Sign Up -->
       <a
         href="#"
         class="text-sm font-semibold bg-green-500 hover:bg-green-400 text-black px-4 py-1.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-green-500/25"
