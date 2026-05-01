@@ -1,7 +1,7 @@
-<script setup>
-import gsap from "gsap"
-</script>
-
 <template>
-  
+  <router-view />
 </template>
+
+<script setup>
+// GSAP is used per-component, not here
+</script>
