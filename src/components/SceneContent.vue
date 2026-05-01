@@ -1,4 +1,3 @@
-<!-- src/components/SceneContent.vue -->
 <template>
   <TresGroup :position="[0, -1, 0]">
     <Model3D />
