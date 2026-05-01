@@ -2,7 +2,6 @@
   <div class="relative flex flex-col w-full h-screen overflow-hidden" style="background: #050810;">
     <Navbar />
 
-    <!-- Loading overlay -->
     <transition name="fade">
       <div
         v-if="isLoading"
@@ -26,7 +25,6 @@
       </div>
     </transition>
 
-    <!-- Error state -->
     <div
       v-if="loadError"
       class="absolute inset-0 z-50 flex items-center justify-center"
@@ -40,11 +38,9 @@
       </div>
     </div>
 
-    <!-- Hero text overlay -->
     <div v-if="!isLoading && !loadError" class="absolute inset-0 z-10 pointer-events-none flex flex-col justify-end p-12">
       <div ref="heroBottom" class="opacity-0 flex items-end justify-between w-full">
 
-        <!-- LEFT: eyebrow + headline -->
         <div class="max-w-lg">
           <p class="text-green-500 font-mono text-xs tracking-[0.28em] uppercase mb-4 flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse"></span>
@@ -59,14 +55,13 @@
           </h1>
         </div>
 
-        <!-- RIGHT: sub-headline + buttons -->
         <div class="max-w-xs flex flex-col items-end gap-5">
           <p class="text-gray-500 font-mono text-sm text-right leading-relaxed">
             Discover nearby recycling centers, learn what you can recycle, and make sustainable living part of everyday life.
           </p>
           <div class="flex flex-col gap-2.5 items-end pointer-events-auto">
             <button class="bg-green-500 hover:bg-green-400 text-gray-950 font-bold text-sm px-7 py-3 rounded-xl transition-colors whitespace-nowrap">
-              📍 Find Nearby Locations
+              Find Nearby Locations
             </button>
             <button class="border border-white/10 hover:border-white/30 text-white/40 hover:text-white/70 font-medium text-sm px-6 py-2.5 rounded-xl transition-colors whitespace-nowrap">
               Explore Materials →
@@ -77,25 +72,21 @@
       </div>
     </div>
 
-    <!-- Gradient overlays -->
     <div class="absolute inset-0 z-[5] pointer-events-none">
       <div class="absolute inset-x-0 bottom-0 h-40" style="background: linear-gradient(to top, #050810, transparent);" />
       <div class="absolute inset-y-0 left-0 w-32" style="background: linear-gradient(to right, #050810aa, transparent);" />
       <div class="absolute inset-y-0 right-0 w-32" style="background: linear-gradient(to left, #050810aa, transparent);" />
     </div>
 
-    <!-- Drag hint -->
     <div v-if="!isLoading && !loadError" class="absolute bottom-14 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
       <p class="text-gray-700 font-mono text-xs tracking-widest">DRAG TO ROTATE · SCROLL TO ZOOM</p>
     </div>
 
-    <!-- Three.js canvas -->
     <div ref="mountRef" class="absolute inset-0 z-0" />
   </div>
 </template>
 
 <script setup>
-// ── 1. nextTick added here ──────────────────────────────────────────────────
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -200,7 +191,6 @@ function initScene() {
 function loadModel() {
   const loader = new GLTFLoader()
 
-  // ── 2. async added to callback so await nextTick() works inside ────────────
   loader.load(
     '/3dTrash.glb',
     async (gltf) => {
@@ -231,9 +221,8 @@ function loadModel() {
       model.rotation.y = Math.PI
       scene.add(model)
 
-      // ── 3. set loading false, then wait for Vue to render the v-if block ───
       isLoading.value = false
-      await nextTick()  // heroBottom.value is now guaranteed to exist in the DOM
+      await nextTick() 
 
       gsap.to(model.position, {
         y: restY,
