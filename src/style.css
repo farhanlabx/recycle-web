@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'MochaChoco';
+    src: url('../public/font-type/Mocha-Choco.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@theme{
+    --font-mocha-choco: 'MochaChoco', sans-serif;
+}

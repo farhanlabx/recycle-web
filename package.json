@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@tresjs/cientos": "^4.3.1",
     "@tresjs/core": "^4.3.6",
     "gsap": "^3.15.0",
