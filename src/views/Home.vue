@@ -1,62 +1,72 @@
 <template>
   <div class="bg-[#25343f]">
-  <div
-    class="relative w-full h-screen overflow-hidden"
-  >
-    <Navbar />
-    <h3 class="absolute z-20 text-white text-7xl left-12 font-bold tracking-tight font-poppins bottom-12">Recycling Shouldn’t <br> Be<span class="text-[#16A34A] drop-shadow-[0_0_12px_rgba(34,197,94,0.4)]"> Hard To Find. </span></h3>
-    <video
-      src="/trash-hero.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      class="absolute top-0 left-0 w-full h-full object-cover"
-    ></video>
-    <div class="absolute z-50 bg-green-600 px-6 py-3 rounded-lg w-fit right-16 bottom-12">
-    <button class="text-white font-bold text-sm">Find Nearby Locations</button>
-  </div>
-  </div>
-
-  <div class="container bg-[#25343f] text-white w-full flex h-screen">
-    <div class="Headline-Recycle text-center content-evenly w-185 h-134 m-auto">
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter -rotate-5 w-100"
+    <div class="relative w-full h-screen overflow-hidden">
+      <Navbar />
+      <h3
+        class="absolute bottom-12 left-12 z-20 flex flex-col text-white text-6xl font-bold tracking-tight font-poppins leading-tight"
       >
-        PEOPLE
-      </div>
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter -rotate-6 relative -top-9 left-55 w-105"
-      >
-        WANT TO
-      </div>
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter rotate-5 relative -top-7 w-120"
-      >
-        RECYCLE.
-      </div>
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter my-3 relative -top-10 left-20 w-150"
-      >
-        THE SYSTEM
-      </div>
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter rotate-5 relative -top-10 -left-2 -mt-5 w-70"
-      >
-        JUST
-      </div>
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter relative -top-32 left-68 w-115"
-      >
-        MAKES IT
-      </div>
-      <div
-        class="split-text text-8xl font-mocha-choco tracking-tighter relative -top-32 left-40 w-80"
-      >
-        HARD.
+        Recycling Shouldn’t <br> Be<span class="text-[#16A34A] drop-shadow-[0_0_12px_rgba(34,197,94,0.4)]"
+        >Hard To Find
+        </span>
+      </h3>
+      <video
+        src="/trash-hero.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      ></video>
+      <div class="absolute inset-0 flex items-end justify-end p-12 z-50">
+        <button
+          class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-sm"
+        >
+          Find Nearby Locations
+        </button>
       </div>
     </div>
-  </div>
+
+    <div class="container bg-[#25343f] text-white w-full flex h-screen">
+      <div
+        class="Headline-Recycle text-center content-evenly w-185 h-134 m-auto"
+      >
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter -rotate-5 w-100"
+        >
+          PEOPLE
+        </div>
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter -rotate-6 relative -top-9 left-55 w-105"
+        >
+          WANT TO
+        </div>
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter rotate-5 relative -top-7 w-120"
+        >
+          RECYCLE.
+        </div>
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter my-3 relative -top-10 left-20 w-150"
+        >
+          THE SYSTEM
+        </div>
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter rotate-5 relative -top-10 -left-2 -mt-5 w-70"
+        >
+          JUST
+        </div>
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter relative -top-32 left-68 w-115"
+        >
+          MAKES IT
+        </div>
+        <div
+          class="split-text text-8xl font-mocha-choco tracking-tighter relative -top-32 left-40 w-80"
+        >
+          HARD.
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
