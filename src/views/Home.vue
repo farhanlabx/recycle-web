@@ -1,41 +1,57 @@
 <template>
-  <div>
-    <div class="relative w-full h-screen overflow-hidden flex items-end">
+<div>
+    <div class="relative w-full h-screen overflow-hidden flex items-end p-10 flex-row justify-between">
       <Navbar />
-      <div class="-z-98 w-screen h-screen absolute top-0 left-0 bg-linear-to-b from-transparent to-black"></div>
+      <div class="absolute inset-0 -z-1">
+        <video
+          src="/trash-hero.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="object-cover w-full h-screen"
+        ></video>
+        <div
+          class="bg-linear-to-b from-transparent to-black/70 absolute inset-0 w-full h-full"
+        ></div>
+      </div>
 
-      <h1 class="text-white font-black leading-[1.04] tracking-tight pb-8 pl-10 "
-        style="font-size: clamp(24px, 5vw, 75px);">
+      <h1 class="text-white font-black leading-[1.04] tracking-tight text-7xl">
         Recycling Shouldn't<br />
         Be
         <div class="inline-flex items-center justify-center">
-          <span class="absolute mx-auto blur-xl text-start box-content text-[#9edab4] font-bold shadow-">Hard To
-            Find.</span>
-          <span class="relative text-[#22c55e] font-bold shadow-">Hard To Find.</span>
+          <span
+            class="absolute text-[#9edab4] mx-auto blur-xl text-start font-bold"
+            >Hard To Find.</span
+          >
+          <span class="relative text-[#22c55e] font-bold text-start"
+            >Hard To Find.</span
+          >
         </div>
       </h1>
-      <video src="/trash-hero.mp4" autoplay muted loop playsinline
-        class="absolute top-0 left-0 w-full h-full object-cover -z-99"></video>
-      <div class="inset-0 flex items-end justify-end p-5 z-50 flex-col relative left-85 pb-10">
-        <p class="max-w-[24rem] text-white pb-4">Discover nearby recycling centers, learn what you can recycle, and make
-          sustainable living
-          part of everyday life.</p>
-        <div>
-          <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-sm mr-3">
-            📍Find Nearby Locations
+
+      <div class="flex flex-col relative gap-4 max-w-[26rem]">
+        <p class="text-white">
+          Discover nearby recycling centers, learn what you can recycle, and
+          make sustainable living part of everyday life.
+        </p>
+        <div class="flex gap-3 w-full">
+          <button
+            class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-sm flex-1"
+          >
+            📍 Find Nearby Locations
           </button>
-          <button class="bg-transparent border-2 border-gray-400 text-white px-5 py-2.5 rounded-lg font-bold text-sm">
+          <button
+            class="bg-transparent border-2 border-gray-400 text-white px-5 py-2.5 rounded-lg font-bold text-sm"
+          >
             Explore Materials
           </button>
         </div>
       </div>
-      <div class="">
-
-      </div>
     </div>
 
     <div class="container bg-[#25343f] text-white w-full flex h-screen">
-      <div class="Headline-Recycle text-center content-evenly w-185 h-134 m-auto">
+      <div class="Headline-Recycle text-center content-evenly max-w-6xl h-134 m-auto">
         <div class="split-text text-8xl font-mocha-choco tracking-tighter -rotate-5 w-100">
           PEOPLE
         </div>
@@ -59,12 +75,11 @@
         </div>
       </div>
     </div>
+    <div class="bg-black w-full h-full"></div>
   </div>
 </template>
 
 <script setup>
-// Gsap Animation scroll
-
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
