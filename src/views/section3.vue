@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <div ref="sectionContainer" class="w-full min-h-[450vh] bg-white z-10 overflow-hidden relative">
+  <div ref="sectionContainer" class="w-full min-h-[420vh] bg-white z-10 overflow-hidden relative">
     <section class="section-step relative z-10">
       <div class="headline-section-step w-150 text-center m-auto text-7xl mt-10 text-gray-800 relative z-20 bg-white p-5"> So we built a simpler way.</div>
       <div class="step relative z-30 w-90 left-120"><img src="../../public/example-picture-1.png" alt=""></div>
@@ -87,7 +87,7 @@
           <div class="step w-120 z-30"><img src="../../public/example-step-3.png" alt="example-picture"
               class="border-4 border-black rounded-4xl"></div>
         </div>
-        <div class="step m-auto relative -bottom-50"><img src="../../public/additional-picture/additional-element-20.png`" alt=""></div>
+        <div class="step m-auto relative -bottom-50"><img src="../../public/additional-picture/additional-element-20.png" alt=""></div>
       </div>
       <div class="svg-path absolute inset-0 z-10 pointer-events-none overflow-visible">
         <svg width="752" height="1721" viewBox="-50 -50 852 1821" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ onMounted(async () => {
 
         {
           opacity: 0,
-          scale: 0,
+          scale: 0.5,
           y: 0,
         },
 
@@ -198,7 +198,7 @@ onMounted(async () => {
 
             start: "top 60%",
 
-            end: "top 60%",
+            end: "top center",
 
             scrub: 1,
           },

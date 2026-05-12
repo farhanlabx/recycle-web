@@ -16,7 +16,7 @@
         </div>
       </h1>
 
-      <div class="flex flex-col relative gap-4 max-w-[26rem]">
+      <div class="flex flex-col relative gap-4 max-w-104">
         <p class="text-white">
           Discover nearby recycling centers, learn what you can recycle, and
           make sustainable living part of everyday life.
